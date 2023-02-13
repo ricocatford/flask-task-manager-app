@@ -1,13 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task Manager</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Tasks</h2>
+
     {%  for task in tasks %}
         {{ task.task_name }}<br>
         {{ task.category_name }}<br>
@@ -15,5 +10,5 @@
         {{ task.is_urgent }}<br>
         {{ task.due_date }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
