@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="teal-text text-darken-4 center-align">Add Task</h3>
+
+    <div class="row">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-pencil-alt prefix teal-text text-darken-4"></i>
+                    <input id="task_name"
+                           name="task_name"
+                           type="text"
+                           class="validate"
+                           minlength="5"
+                           maxlength="50"
+                           required>
+                    <label for="task_name">Task</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-align-left prefix teal-text text-darken-4"></i>
+                    <textarea id="task_description"
+                              name="task_description"
+                              class="materialize-textarea validate"
+                              minlength="5"
+                              maxlength="200"
+                              required>
+                    </textarea>
+                    <label for="task_description">Description</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}
