@@ -3,7 +3,7 @@
 
     <h3 class="teal-text text-darken-4 center-align">Add Task</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
@@ -29,6 +29,25 @@
                               required>
                     </textarea>
                     <label for="task_description">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
+                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                    <label for="due_date">Due Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <i class="fa-solid fa-exclamation-circle prefix teal-text text-darken-4"></i>
+                        <label for="is_urgent" >
+                            <input type="checkbox" id="is_urgent" name="is_urgent">
+                            <span class="lever"></span>
+                            Is Urgent
+                        </label>
+                    </div>
                 </div>
             </div>
         </form>
